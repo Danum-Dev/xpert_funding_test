@@ -1,4 +1,3 @@
-
 # Two Step Challenge Dashboard (Flutter Web)
 
 This project is a responsive **Two Step Challenge** dashboard UI built with **Flutter Web** for both desktop and mobile, based on the provided design.
@@ -39,10 +38,25 @@ This project is a responsive **Two Step Challenge** dashboard UI built with **Fl
 ## 📂 Project Structure
 ```
 lib/
- ├── main.dart            # Application entry point
- ├── dashboard_page.dart  # Main dashboard page
- ├── challenge_model.dart # Challenge data model
- └── challenge_card.dart  # Challenge card widget
+ ├── commons/
+ │    ├── constants.dart         # Color, gradient, font, and asset constants
+ │    ├── theme.dart             # App-wide theme configuration
+ │    └── ui/
+ │         └── dot.dart          # UI helper for dot elements
+ │
+ ├── models/
+ │    └── challenge_model.dart   # Challenge data model
+ │
+ ├── pages/
+ │    ├── dashboard_page.dart    # Main dashboard page
+ │    └── widgets/
+ │         ├── challenge_card.dart   # Challenge card widget
+ │         ├── pro_badge.dart        # Pro badge widget
+ │         ├── status_badge.dart     # Status badge widget
+ │         ├── step_card.dart        # Step card widget
+ │         └── step_progress.dart    # Step progress widget
+ │
+ └── main.dart                   # Application entry point
 ```
 
 ---
@@ -79,7 +93,7 @@ Make sure you have **Flutter SDK** installed.
 ---
 
 ## ⚙️ Customization
-- Update the challenge list in `DashboardPage` to match your needs.
+- Update the challenge list in `dashboard_page.dart` to match your needs.
 - To add **hover effects** on Web, wrap `ChallengeCard` with a `MouseRegion` widget.
 
 ---
@@ -95,5 +109,3 @@ Make sure you have **Flutter SDK** installed.
 This project is licensed under the MIT License — free to use for personal and commercial purposes.
 
 ---
-
-**Made with ❤️ using Flutter**
